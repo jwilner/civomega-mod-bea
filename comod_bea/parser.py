@@ -44,7 +44,6 @@ def answer_pattern(pattern, args):
 
 
 def render_answer_html(answer_data):
-    print answer_data
     results = answer_data["results"]
     template = answer_data["template"]
     template = loader.get_template(os.path.join('comod_bea', template))
