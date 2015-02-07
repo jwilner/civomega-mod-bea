@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-setup(name='civomega-mod-us-census',
+setup(name='civomega-mod-bea',
       version='2.0-alpha.3', # http://semver.org/
       description="",
       long_description="",

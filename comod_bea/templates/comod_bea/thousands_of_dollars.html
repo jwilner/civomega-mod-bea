@@ -1,0 +1,27 @@
+{%if data|length == 0 %}
+  <p>No data found</p>
+{% else %}
+  <p>{{ data|length }} results found.</p>
+  <p>Source: US Department of Commerce, Bureau of Economic Analysis</p>
+  <table class="tablesorter">
+      <thead>
+        <tr>
+            <th>Area name</th>
+            <th>Year</th>
+            <th>Thousands of USD</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in data %}
+            <tr>
+                <td>{{ item.GeoName }}</td>
+                <td>{{ item.TimePeriod }}</td>
+                <td>{{ item.DataValue }}</td>
+            </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+  <script type="text/javascript">
+   $(".tablesorter").tablesorter();
+  </script>
+{% endif %}
