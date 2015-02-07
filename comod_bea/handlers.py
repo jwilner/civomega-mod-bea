@@ -92,12 +92,24 @@ def query(session, geo_fips, key_code, years=None):
 
 PATTERN_HANDLERS[patterns.STATE_GDP] = \
     query_single_year, {"geo_fips": "STATE", "key_code": "GDP_SP"}, \
-    "thousands_of_dollars.html"
+    "dollars.html"
 
-PATTERN_HANDLERS[patterns.COUNTY_PERSONAL_INCOME] = \
+PATTERN_HANDLERS[patterns.COUNTY_TPI] = \
     query_single_year,  {"geo_fips": "COUNTY", "key_code": "TPI_CI"}, \
-    "thousands_of_dollars.html"
+    "dollars.html"
 
-PATTERN_HANDLERS[patterns.STATE_PERSONAL_INCOME] = \
+PATTERN_HANDLERS[patterns.STATE_TPI] = \
     query_single_year,  {"geo_fips": "STATE", "key_code": "TPI_SI"}, \
-    "thousands_of_dollars.html"
+    "dollars.html"
+
+PATTERN_HANDLERS[patterns.COUNTY_PCPI] = \
+    query_single_year, {"geo_fips": "COUNTY", "key_code": "PCPI_CI"}, \
+    "dollars.html"
+
+PATTERN_HANDLERS[patterns.STATE_PCPI] = \
+    query_single_year, {"geo_fips": "STATE", "key_code": "PCPI_SI"}, \
+    "dollars.html"
+
+PATTERN_HANDLERS[patterns.STATE_PC_GDP] = \
+    query_single_year, {"geo_fips": "STATE", "key_code": "PCRGDP_SP"}, \
+    "dollars.html"

@@ -8,7 +8,7 @@
         <tr>
             <th>Area name</th>
             <th>Year</th>
-            <th>Thousands of USD</th>
+            <th>{{ meta_data.UnitOfMeasure|title }}</th>
         </tr>
       </thead>
       <tbody>
@@ -16,7 +16,7 @@
             <tr>
                 <td>{{ item.GeoName }}</td>
                 <td>{{ item.TimePeriod }}</td>
-                <td>{{ item.DataValue }}</td>
+                <td>${{ item.DataValue }}</td>
             </tr>
         {% endfor %}
       </tbody>

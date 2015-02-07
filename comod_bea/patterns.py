@@ -14,14 +14,16 @@ PATTERNS = frozenset([
 
 """
 STATE_GDP = "What was the real GDP by state in {year}?"
-COUNTY_GDP_RANGE = "What was the real GDP by county from {start_year} to " \
-                   "{end_year}?"
+STATE_PC_GDP = "What was the per capita GDP by state in {year}?"
 STATE_GDP_RANGE = "What was the real GDP by county from {start_year} to " \
                   "{end_year}?"
 
-COUNTY_PERSONAL_INCOME = "What was personal income by county in {year}?"
-STATE_PERSONAL_INCOME = "What was the real GDP by state in {year}?"
+COUNTY_TPI = "What was total personal income by county in {year}?"
+STATE_TPI = "What was the total personal income by state in {year}?"
+
+STATE_PCPI = "What was the per-capita personal income by state in {year}?"
+COUNTY_PCPI = "What was the per-capita personal income by county in {year}?"
 
 
-PATTERNS = frozenset([COUNTY_PERSONAL_INCOME, STATE_GDP,
-                      STATE_PERSONAL_INCOME])
+PATTERNS = frozenset([COUNTY_TPI, STATE_GDP, STATE_TPI, STATE_PCPI,
+                      COUNTY_PCPI, STATE_PC_GDP])
