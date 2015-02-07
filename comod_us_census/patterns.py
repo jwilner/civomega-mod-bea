@@ -14,5 +14,7 @@ PATTERNS = frozenset([
 
 """
 
-PATTERNS = frozenset([
-])
+PLACE_YEAR_POPULATION = "how many people lived in {place} in {year}?"
+PLACE_POPULATION = "what is the population of {place}?"
+
+PATTERNS = frozenset([PLACE_POPULATION, PLACE_YEAR_POPULATION])
